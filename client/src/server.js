@@ -29,7 +29,7 @@ connection.on("error", (err) => {
 });
 
 // define routes
-require("./routes/index")(app);
+// require("./routes/index")(app);
 
 // chatch all and forward it to index whe react router takes over
 app.get("/*", function (req, res) {

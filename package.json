@@ -12,7 +12,8 @@
     "react",
     "nodejs",
     "jwt",
-    "express"
+    "express",
+    "ecommerce"
   ],
   "author": "Jan Horak",
   "license": "ISC",
