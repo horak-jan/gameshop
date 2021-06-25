@@ -1,0 +1,41 @@
+{
+  "name": "gameshop",
+  "version": "1.0.0",
+  "description": "Game shop build with MERN stack and data from Steam",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack -w",
+    "start": "nodemon client/src/server.js",
+    "dev": "webpack --mode development && nodemon client/src/server.js"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "jwt",
+    "express"
+  ],
+  "author": "Jan Horak",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-react": "^7.14.5",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "body-parser": "^1.19.0",
+    "css-loader": "^5.2.6",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-hook-form": "^7.9.0",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
