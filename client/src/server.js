@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
+const bodyParser = require("body-parser");
 
 require("dotenv").config({ path: __dirname + "/.env" });
 const DIST_DIR = path.resolve("public/build/");
@@ -10,6 +11,9 @@ let PORT = process.env.PORT || 3000;
 // create exp. app
 const app = express();
 app.use(express.static(DIST_DIR));
+
+//set up body parser
+app.use(bodyParser.json());
 
 // connect to DB
 const connUri = process.env.MONGO_URI;
@@ -29,7 +33,7 @@ connection.on("error", (err) => {
 });
 
 // define routes
-// require("./routes/index")(app);
+require("./routes/index")(app);
 
 // chatch all and forward it to index whe react router takes over
 app.get("/*", function (req, res) {
